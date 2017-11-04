@@ -1,0 +1,30 @@
+.app-wrapper {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #ddd;
+}
+
+.fill-content {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.bg-facebook {
+  background-color: #3b5998 !important;
+  color: #fff !important;
+}
+
+.bg-google {
+  background-color: #d43f3a !important;
+  color: #fff !important;
+}
