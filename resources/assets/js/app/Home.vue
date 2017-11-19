@@ -1,13 +1,13 @@
 <template>
-  <md-layout>
-    <div v-if="!authenticated">
+  <div class="app-base">
+    <div v-if="!authenticated" class="fill-content md-layout">
       <Login></Login>
     </div>
 
-    <div v-if="authenticated">
+    <div v-if="authenticated" class="fill-content md-layout">
       <router-view></router-view>
     </div>
-  </md-layout>
+  </div>
 </template>
 
 <script>

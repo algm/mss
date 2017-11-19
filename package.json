@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "vue-axios": "^2.0.2",
-        "vue-material": "^0.8.1",
+        "vue-material": "beta",
         "vue-router": "^3.0.1",
         "vuex": "^3.0.1"
     }
