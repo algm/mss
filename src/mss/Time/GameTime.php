@@ -19,7 +19,7 @@ class GameTime
      */
     public function __construct(TimeRepositoryInterface $repository, float $factor = null)
     {
-        $this->factor = $factor ?? floatval(env('TIME_FACTOR', 1));
+        $this->factor = $factor ?? floatval(env('MSS_TIME_FACTOR', 1));
         $this->repository = $repository;
     }
 
@@ -40,7 +40,7 @@ class GameTime
      */
     public function tick(): GameTime
     {
-        $newTimestamp = $this->current()->timestamp + 60 * $this->factor;
+        $newTimestamp = $this->current()->timestamp + $this->factor;
         $newTime = Carbon::createFromTimestamp(round($newTimestamp));
 
         $this->current = $newTime;

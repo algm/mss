@@ -15,7 +15,7 @@ class TimeTest extends TestCase
     {
         Event::fake();
 
-        $factor = 2.1726190476;
+        $factor = 187714.285714286;
 
         $time = new GameTime(new FakeTimeRepository, $factor);
 
@@ -28,6 +28,6 @@ class TimeTest extends TestCase
 
         Event::assertDispatched(TimePassed::class);
 
-        $this->assertEquals(130, $time->current()->timestamp);
+        $this->assertEquals(187714, $time->current()->timestamp);
     }
 }
