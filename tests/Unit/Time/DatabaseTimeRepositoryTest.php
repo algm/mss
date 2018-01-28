@@ -23,7 +23,6 @@ class DatabaseTimeRepositoryTest extends TestCase
         $repo = new DatabaseTimeRepository;
 
         $newtime = $repo->set(Carbon::createFromTimestamp(130))->current();
-
         $this->assertEquals(130, $newtime->timestamp);
     }
 }

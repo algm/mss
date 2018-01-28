@@ -37,6 +37,6 @@ class DatabaseTimeRepository implements TimeRepositoryInterface
             return Carbon::createFromTimestamp(0);
         }
 
-        return Carbon::createFromTimestamp(strtotime($found->time));
+        return Carbon::createFromTimestamp($found->time);
     }
 }
