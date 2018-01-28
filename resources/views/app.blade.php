@@ -13,11 +13,16 @@
 <body>
     <div class="app-wrapper">
       <div id="app">
-        <router-view></router-view>
+
       </div>
     </div>
 
     <!-- Scripts -->
+    <script>
+        var MSS_VARS = @json([
+            'timeFactor' => floatval(env('MSS_TIME_FACTOR', 1))
+        ]);
+    </script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
