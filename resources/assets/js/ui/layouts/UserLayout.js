@@ -42,11 +42,11 @@ const UserLayout = ({ user, children, logout }) => (
                             {user.name}
                         </DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem>
-                            <a href="#" onClick={() => {
-                                logout();
-                                logoutUser();
-                            }}>Salir</a>
+                        <DropdownItem onClick={() => {
+                            logout();
+                            logoutUser();
+                        }}>
+                            Salir
                         </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledDropdown>
