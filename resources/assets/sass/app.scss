@@ -1,10 +1,9 @@
-
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic");
+@import url('https://fonts.googleapis.com/css?family=Istok+Web');
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import 'md_init';
+@import "~bootstrap/scss/bootstrap";
 
 @import "custom";

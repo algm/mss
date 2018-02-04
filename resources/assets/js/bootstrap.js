@@ -1,4 +1,3 @@
-
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -9,6 +8,10 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+/** app bootstraping */
+import App from './ui/App';
+import React from 'react';
+import { render } from 'react-dom';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -24,3 +27,5 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+render(<App />, document.getElementById('app'));

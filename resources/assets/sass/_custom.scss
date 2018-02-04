@@ -1,30 +1,46 @@
 .app-wrapper {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  background: #ddd;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.fill-content {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  left: 0;
+.fill-parent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.bg-facebook {
-  background-color: #3b5998 !important;
-  color: #fff !important;
+.app-root {
+    background: #fdfdfd;
 }
 
-.bg-google {
-  background-color: #d43f3a !important;
-  color: #fff !important;
+.login-container {
+    background: #777 url('/img/bg_login1.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+
+.login-card {
+    width: 75%;
+    margin: auto;
+    max-width: 30rem;
+}
+
+.btn-facebook {
+    background: #3B5998;
+    border-color: darken(#3B5998, 5%);
+
+    &:hover, &:active {
+        background: lighten(#3B5998, 5%);
+    }
+}
+
+.btn-google {
+    background: #DB4437;
+    border-color: darken(#DB4437, 5%);
+
+    &:hover, &:active {
+        background: lighten(#DB4437, 5%);
+    }
 }

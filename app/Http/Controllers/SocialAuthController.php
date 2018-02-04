@@ -22,6 +22,13 @@ class SocialAuthController extends Controller
         $user = $service->createOrGetUser(Socialite::driver($provider)->stateless()->user());
         $token = \JWTAuth::fromUser($user);
 
-        return redirect()->to("/?token=$token");
+        return view('app', [
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'avatar' => $user->avatar
+            ],
+            'token' => $token
+        ]);
     }
 }
