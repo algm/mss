@@ -35,7 +35,7 @@ const UserLayout = ({ user, children, logout }) => (
             <Nav navbar>
                 <UncontrolledDropdown nav>
                     <DropdownToggle nav>
-                        <img src={user.avatar} className="rounded-circle" />
+                        <img src={user.avatar} className="rounded-circle navbar-avatar"/>
                     </DropdownToggle>
                     <DropdownMenu>
                         <DropdownItem header>
