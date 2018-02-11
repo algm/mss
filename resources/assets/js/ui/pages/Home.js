@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Dashboard from './Dashboard';
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom';
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
     };
 };
 
-class Home extends Component {
+class Home extends PureComponent {
     render() {  
         if (!this.props.loggedIn) {
             return (

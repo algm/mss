@@ -1,4 +1,4 @@
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import React from 'react';
 import store from '../data/state/store'
 import AppLayout from './layouts/AppLayout';

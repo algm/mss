@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/auth0/callback', '\Auth0\Login\Auth0Controller@callback');
-
 Route::get('{provider}/redirect', 'SocialAuthController@redirect');
 Route::get('{provider}/callback', 'SocialAuthController@callback');
 

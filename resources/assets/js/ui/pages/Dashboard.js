@@ -1,10 +1,26 @@
 import React from 'react';
 import UserLayout from '../layouts/UserLayout';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
-const Dashboard = () => (
-    <UserLayout>
-        <div>soy el dashboard</div>
-    </UserLayout>
-);
+const Dashboard = ({data}) => {
+    let content = <div>loading...</div>;
+    
+    if (!data.loading) {
+        content = <div>{JSON.stringify(data)}</div>;
+    }
 
-export default Dashboard;
+    return (
+        <UserLayout>
+            {content}
+        </UserLayout>
+    );
+};
+
+export default graphql(gql`
+  query HelloWorld {
+    user {
+        token
+    }
+  }
+`)(Dashboard);
